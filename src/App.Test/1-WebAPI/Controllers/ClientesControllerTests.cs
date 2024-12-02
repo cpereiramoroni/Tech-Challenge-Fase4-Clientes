@@ -1,5 +1,6 @@
 ﻿using Amazon.CognitoIdentityProvider.Model;
 using App.Application.Interfaces;
+using App.Web.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using System.Collections.Generic;
