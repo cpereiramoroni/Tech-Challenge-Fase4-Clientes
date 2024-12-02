@@ -33,7 +33,7 @@ public class ClientesControllerTests
         var okResult = Assert.IsType<OkObjectResult>(result);
         Assert.Equal(users, okResult.Value);
     }
-
+     
     [Fact]
     public async Task BuscaUsuarios_ReturnsNoContent_WhenNoUsersFound()
     {
