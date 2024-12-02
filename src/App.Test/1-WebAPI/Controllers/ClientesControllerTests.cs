@@ -18,7 +18,7 @@ public class ClientesControllerTests
         _controller = new ClientesController(_mockAuthService.Object);
     }
 
-    [Fact]
+    [Fact] 
     public async Task BuscaUsuarios_ReturnsOkResult_WhenUsersFound()
     {
         // Arrange
