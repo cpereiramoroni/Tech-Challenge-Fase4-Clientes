@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 
 namespace App.Application.Utils;
 
@@ -45,7 +46,7 @@ public static class Validator
 
     public static string LimparCpf(string cpf)
     {
-        return Regex.Replace(cpf.Trim(), @"[^\d]", "");
+        return Regex.Replace(cpf.Trim(), @"[^\d]", "", RegexOptions.None, TimeSpan.FromMilliseconds(100));
     }
 
     public static bool ValidarEmail(string email)
@@ -56,7 +57,7 @@ public static class Validator
         // Expressão regular para validação de email (simplificada)
         string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
-        return Regex.IsMatch(email, pattern, RegexOptions.IgnoreCase);
+        return Regex.IsMatch(email, pattern, RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(100));
     }
 
 }
