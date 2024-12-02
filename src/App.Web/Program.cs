@@ -65,7 +65,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
-//app.MapGet("/", () => "Bem vindo ao Lambda Auth Lanches BD Fiap");
 
 
 app.Run();
